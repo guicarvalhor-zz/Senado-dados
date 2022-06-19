@@ -9,7 +9,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
+  grafico: any;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -18,4 +18,7 @@ export class MenuComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  getGrafico(tipo: any) {
+    this.grafico = tipo;
+  }
 }

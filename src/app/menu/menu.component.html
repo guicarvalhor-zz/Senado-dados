@@ -5,8 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Dados disponíveis</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="grafico">Receitas</a>
-      <a mat-list-item routerLink="">Despesas</a>
+      <a mat-list-item (click)="getGrafico(1)">Receitas</a>
+      <a mat-list-item (click)="getGrafico(2)">Despesas</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,13 +23,7 @@
     </mat-toolbar>
     <!-- Add Content Here -->
     <!-- Inserir o primeiro gráfico -->
-    <div class="painel">
-      <h1>Receitas</h1>
-      <p>Dados relativos à previsão e à arrecadação de receitas próprias pelo Senado Federal a partir de 2012.</p>  
-    </div>
-    
-    <div class="" style="width: 89%; height: 100vh; margin-top: 30px;">
-      <!-- <app-graficos></app-graficos> -->
-    </div>
+    <app-graficos *ngIf="grafico === 1"></app-graficos>
+    <app-graficos2 *ngIf="grafico === 2"></app-graficos2>
   </mat-sidenav-content>
 </mat-sidenav-container>

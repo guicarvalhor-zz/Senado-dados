@@ -14,13 +14,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
-
-
+import { GraficosComponent } from './graficos/graficos.component';
+import { Graficos2Component } from './graficos/grafico2.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    Graficos2Component,
+    GraficosComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,10 @@ import { CommonModule } from '@angular/common';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    CommonModule
+    CommonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

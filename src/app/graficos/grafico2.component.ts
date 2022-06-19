@@ -13,7 +13,6 @@ interface DadosGrafico {
     templateUrl: './grafico2.component.html',
     styleUrls: ['./graficos.component.css'],
   })
-  
   export class Graficos2Component implements OnInit {
     json: any;
     chart2: any;
